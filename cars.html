@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./images/car.svg" type="image/x-icon" />
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="./css/load.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/mobile.css">
+        <title>Product</title>
+        <style>
+        body { margin: 0; background-color: rgb(9, 251, 37); text-align: center; }
+        #test { height:80px; width:80px; position:fixed; background-color:rgb(84,175,42); border-radius:5px; right:1em; bottom:1em; }
+        .img-w { width:80px; height:80px; }
+        .align-center { text-align:center; margin:0 auto; }
+        .container-product { 
+            border-radius:30px; 
+            width:33%; 
+            display:inline-block; 
+            background-color:#bd6c1c; 
+            margin: 1em;
+            margin-top:2em; box-shadow:0px 3px 75px -14px rgba(51,51,51,0.75); }
+        .product { width:250px; }
+        .title-product { display:block; color:white; font-weight:bold; padding:1em; letter-spacing:0.2em; }
+        @media(max-width:900px) { .container-product { width:80%; overflow:hidden; } }
+    </style>
+    </head>
+    <body id="body">
+
+        <div id="test"><img class="img-w"
+                src="./images/WhatsApp-icon-PNG.png"></div>
+
+        <div class="bg-load">
+            <div class="align">
+                <img class="carimage" src="./images/car.svg">
+                <a class="descript-load">Caricamento..</a>
+            </div>
+        </div>
+
+        <div class="mobile">
+            <img class="mobile-logo" src="./images/logo.svg">
+            <img class="mobileexit" id="mobilexit" src="./images/index.png">
+            <div class="ul-list-mobile"><ul>
+                    <a href="index.html" class="items-mobile"><li><img
+                                src="./images/car.svg"> Chi siamo</li></a>
+                    <a href="contact.html" class="items-mobile"><li><img
+                                src="./images/car.svg"> Contatti</li></a>
+                    <a href="cars.html" class="items-mobile"><li><img
+                                src="./images/car.svg"> Catalogo</li></a>
+                    <a href="novita.html" class="items-mobile"><li><img
+                                src="./images/car.svg"> Novità</li></a>
+                    <a href="cars.html" class="items-mobile"><li><img
+                                src="./images/car.svg"> Storia</li></a>
+                </ul></div>
+        </div>
+
+        <div class="header">
+            <img class="logo" src="./images/logo.svg">
+            <img class="menu" id="mobilemenu" src="./images/menu.svg">
+            <div class="ul-list"><ul>
+                    <a href="index.html" class="items"><img
+                            src="./images/car.svg"> Chi siamo</a>
+                    <a href="contact.html" class="items"><li><img
+                                src="./images/car.svg"> Contatti</li></a>
+                    <a href="cars.html" class="items"><li><img
+                                src="./images/car.svg"> Catalogo</li></a>
+                    <a href="novita.html" class="items"><li><img
+                                src="./images/car.svg"> Novità</li></a>
+                    <a href="storia.html" class="items"><li><img
+                                src="./images/car.svg"> Storia</li></a>
+                </ul></div>
+        </div>
+
+        <div class="align-center" id="innerqui">
+            <script src="./js/cars.js"></script>
+        </div>
+
+        <script src="./js/load.js"></script>
+    </body>
+</html>

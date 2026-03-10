@@ -1,0 +1,51 @@
+
+body {
+    margin: 0;
+}
+
+.bg-load {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+}
+
+.align {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+.carimage {
+    width: 50px;
+    display: block;
+    animation: carmoviment 6s infinite;
+
+}
+@keyframes carmoviment {
+    0% {
+        margin-left: 0%;
+    }
+    50% {
+        margin-left: 80%;
+    }      
+    99% {
+        transform: scaleX(-0.5);
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
+.descript-load {
+    display: block;
+    margin: 1em;
+    border-bottom: 2px solid green;
+    padding: 1em;
+    letter-spacing: 0.6em;
+}
