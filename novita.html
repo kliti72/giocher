@@ -12,17 +12,67 @@
     <style>
         #test { height:80px; width:80px; position:fixed; background-color:rgb(84,175,42); border-radius:5px; right:1em; bottom:1em; }
         .img-w { width:80px; height:80px; }
-        .title-news { font-size:1.5em; letter-spacing:0.5em; font-weight:bold; margin:2em auto 1em; display:block; text-align:center; }
+        .title-news {color:rgb(255,174,24);  font-size:1.5em; letter-spacing:0.5em; font-weight:bold; margin:2em auto 1em; display:block; text-align:center; }
         .container-news { display:flex; flex-direction:row; margin:0 auto; width:80%; }
         .box-1 { width:30%; display:flex; }
         .noncostofisso { font-weight:bold; color:rgb(24,24,23); font-size:1em; display:block; text-align:center; margin-top:2em; }
         .costofisso { font-weight:bold; color:orange; font-size:2em; display:block; text-align:center; margin:0 auto 4em; }
-        .img-news { width:100%; }
+        .img-news { width:100%; background-repeat: no-repeat; background-size: contain; width: 350px; height: 250px;}
         @media(max-width:956px) {
             .title-news { text-transform:uppercase; color:rgb(255,174,24); border-top:2px solid rgb(255,174,24); padding-top:1em; width:80%; margin-left:auto; margin-right:auto; }
-            .container-news { width:100%; flex-direction:column; }
+            .container-news { width:100%; flex-direction:column; overflow: hidden;}
             .box-1 { margin:0 auto; width:70%; }
         }
+
+        /* nel tuo <style> dentro la pagina, sostituisci tutto il blocco novità */
+
+.container-news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* 3 grandi su desktop */
+  gap: 1.5em;
+  margin: 0 auto 2em;
+  width: 92%;
+}
+
+.box-1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 100%;              /* togli il width:30% che avevi prima */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box-1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.img-news {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+@media (max-width: 956px) {
+  .container-news {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 1em;
+  }
+
+  .box-1 {
+    width: 100%;
+  }
+
+  .img-news {
+    height: auto;
+  }
+}
     </style>
 </head>
 <body>
@@ -35,7 +85,7 @@
     </div>
 
     <div class="mobile">
-        <img class="mobile-logo" src="./images/logo.svg">
+        <img class="mobile-logo" src="./images/logo.svg" href="index.html" onclick="window.location = './index.html'" style="cursor: pointer;">
         <img class="mobileexit" id="mobilexit" src="./images/index.png">
         <div class="ul-list-mobile"><ul>
             <a href="index.html"   class="items-mobile"><li><img src="./images/car.svg"> Chi siamo</li></a>
@@ -47,7 +97,7 @@
     </div>
 
     <div class="header">
-        <img class="logo" src="./images/logo.svg">
+        <img class="logo" src="./images/logo.svg" onclick="window.location = './index.html'" style="cursor: pointer;">
         <img class="menu" id="mobilemenu" src="./images/menu.svg">
         <div class="ul-list"><ul>
             <a href="index.html"   class="items"><img src="./images/car.svg"> Chi siamo</a>
@@ -56,6 +106,132 @@
             <a href="novita.html"  class="items"><li><img src="./images/car.svg"> Novità</li></a>
             <a href="storia.html"  class="items"><li><img src="./images/car.svg"> Storia</li></a>
         </ul></div>
+    </div>
+
+
+    <a class="title-news">Nuovi Modellini Fiat Ducato 1/43 </a>
+    <a class="title-news">Modellini Fiat Ducato 1/43 </a>
+    <div class="container-news" >
+        
+     <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ducato_kit.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43  </span>
+        </div>
+
+        <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_1.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43  | Guardia di finanzia </span>
+        </div>
+
+        <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_2.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Autodelta </span>
+        </div>
+
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_3.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Guardia di finanzia </span>
+        </div>
+
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_4.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Polizia </span>
+        </div>
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_6.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | CROCE BIANCA MILANO </span>
+        </div>
+    </div>
+
+     <div class="container-news" >
+        
+
+        <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_7.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Carabinieri </span>
+        </div>
+
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_8.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Guardia di finanzia </span>
+        </div>
+
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_9.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Scuola bus </span>
+        </div>
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_10.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Autodelta </span>
+        </div>
+    </div>
+
+    <div class="container-news" >
+        
+        <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_11.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43   </span>
+        </div>
+
+        <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_12.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Autodelta </span>
+        </div>
+
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_13.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Carabinieri </span>
+        </div>
+
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_14.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Polizia </span>
+        </div>
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_15.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Polizia </span>
+        </div>
+    </div>
+
+      <div class="container-news" >
+        
+        <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_16.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43  | Dorappie </span>
+        </div>
+
+        <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_17.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Croce rossa italiana</span>
+        </div>
+
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_18.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Vigili del fuoco </span>
+        </div>
+
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_14.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Polizia </span>
+        </div>
+              <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_19.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 | Carabinieri </span>
+        </div>
+    </div>
+    
+      <div class="container-news" >
+        
+        <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_20.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43  | Polizia</span>
+        </div>
+
+        <div class="box-1" style=" display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden;">
+            <img class="img-news"  style="margin: 0.5em;" src="./images/novita/ambulanza_21.jpeg">
+            <span style="margin: 0.5em;"> Fiat Ducato 1/43 </span>
+        </div>
+
     </div>
 
     <a class="title-news">Nuove Scatole</a>
