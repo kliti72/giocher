@@ -1,126 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="./images/car.svg" style="width: 25px;" type="image/x-icon" />
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- ===================== SEO CORE ===================== -->
+        <title>Catalogo Modellini Auto – Collezione in Scala 1/43 | TheGiocher</title>
+        <meta name="description" content="Centinaia di modellini auto in scala 1/43 selezionati da due veri appassionati. Ferrari, Alfa Romeo, Lancia, auto da corsa e tanto altro. Sfoglia il catalogo TheGiocher e trova il pezzo che ti manca.">
+        <meta name="keywords" content="catalogo modellini auto, scala 1/43, modellini Ferrari, modellini Alfa Romeo, modellini Lancia, auto da corsa in scala, collezione modellismo, modellini rari, diecast Italia, TheGiocher catalogo">
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+        <meta name="author" content="Giuliano e Michele – TheGiocher">
+        <link rel="canonical" href="https://www.thegiocher.it/cars.html">
+
+        <!-- ===================== OPEN GRAPH ===================== -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.thegiocher.it/cars.html">
+        <meta property="og:title" content="Catalogo Modellini Auto in Scala 1/43 – TheGiocher">
+        <meta property="og:description" content="Centinaia di modellini selezionati da due appassionati veri. Ferrari, Alfa Romeo, auto storiche e da corsa. Sfoglia il catalogo TheGiocher.">
+        <meta property="og:image" content="https://www.thegiocher.it/images/og-cover.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:site_name" content="TheGiocher">
+        <meta property="og:locale" content="it_IT">
+
+        <!-- ===================== TWITTER CARD ===================== -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Catalogo Modellini Auto in Scala 1/43 – TheGiocher">
+        <meta name="twitter:description" content="Centinaia di modellini selezionati da due appassionati veri. Sfoglia il catalogo TheGiocher.">
+        <meta name="twitter:image" content="https://www.thegiocher.it/images/og-cover.jpg">
+
+        <!-- ===================== SCHEMA.ORG – CollectionPage + ItemList ===================== -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Catalogo Modellini Auto – TheGiocher",
+          "description": "Collezione di modellini auto in scala 1/43 curata da Giuliano e Michele, appassionati di motori e modellismo da tutta la vita.",
+          "url": "https://www.thegiocher.it/cars.html",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "TheGiocher",
+            "url": "https://www.thegiocher.it"
+          },
+          "about": {
+            "@type": "Thing",
+            "name": "Modellismo automobilistico in scala 1/43",
+            "description": "Modellini di auto storiche, da corsa e moderne in scala 1/43, statici e dinamici."
+          }
+        }
+        </script>
+
+        <!-- ===================== BREADCRUMB SCHEMA ===================== -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.thegiocher.it/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Catalogo",
+              "item": "https://www.thegiocher.it/cars.html"
+            }
+          ]
+        }
+        </script>
+
+        <!-- ===================== PERFORMANCE ===================== -->
+        <link rel="preconnect" href="https://ajax.googleapis.com">
+        <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+        <link rel="preload" href="./css/style.css" as="style">
+        <link rel="preload" href="./images/logo.svg" as="image">
+
+        <!-- ===================== FAVICON ===================== -->
+        <link rel="icon" href="./images/car.svg" type="image/svg+xml">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <!-- ===================== SCRIPTS & STYLES ===================== -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" href="./css/load.css">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/mobile.css">
-        <link rel="stylesheet" type="text/css" href="./css/header.css">
-        <title>Product</title>
+        <link rel="stylesheet" href="./css/header.css">
+
         <style>
         body { margin: 0; background-color: rgb(255, 255, 255); text-align: center; }
         #test { height:80px; width:80px; position:fixed; background-color:rgb(84,175,42); border-radius:5px; right:1em; bottom:1em; }
         .img-w { width:80px; height:80px; }
         .align-center { text-align:center; margin:0 auto; }
-        .container-product { 
-            border-radius:30px; 
-            width:33%; 
-            display:inline-block; 
-            background-color:#bd6c1c; 
+        .container-product {
+            border-radius:30px;
+            width:33%;
+            display:inline-block;
+            background-color:#bd6c1c;
             margin: 1em;
-            margin-top:2em; box-shadow:0px 3px 75px -14px rgba(51,51,51,0.75); }
+            margin-top:2em;
+            box-shadow:0px 3px 75px -14px rgba(51,51,51,0.75);
+        }
         .product { width:250px; }
         .title-product { display:block; color:white; font-weight:bold; padding:1em; letter-spacing:0.2em; }
-        @media(max-width:900px) { .container-product { width:80%; overflow:hidden; } }
-    </style>
+
+        /* Intro catalogo – SEO text visibile ma integrato nel design */
+        .catalog-intro {
+            max-width: 780px;
+            margin: 2em auto 0.5em auto;
+            padding: 0 1.5em;
+            text-align: left;
+        }
+        .catalog-intro h1 {
+            font-size: 2em;
+            color: #bd6c1c;
+            margin-bottom: 0.3em;
+            letter-spacing: 0.05em;
+        }
+        .catalog-intro p {
+            font-size: 1em;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 0.5em;
+        }
+        .catalog-intro strong { color: #bd6c1c; }
+
+        @media(max-width:900px) {
+            .container-product { width:80%; overflow:hidden; }
+            .catalog-intro h1 { font-size: 1.4em; }
+        }
+        </style>
     </head>
+
     <body id="body">
 
+        <header role="banner" aria-label="Intestazione principale TheGiocher">
+
             <!-- Modal Mobile -->
-        <div class="mobile">
-            <img class="mobile-logo" src="./images/logo.svg" onclick="window.location = './index.html'" style="cursor: pointer;">
-            <img class="mobileexit" id="mobilexit" src="./images/index.png">
-            <div class="ul-list-mobile">
-                <ul>
-                    <a href="index.html" class="items-mobile"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Chi siamo </li></a>
-                    <a href="contact.html" class="items-mobile"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Contatti </li></a>
-                    <a href="cars.html" class="items-mobile"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Catalogo </li></a>
-                    <a href="novita.html" class="items-mobile"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Novità </li></a>
-                    <a href="storia.html" class="items-mobile"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Storia </li></a>
-                </ul>
-            </div>
-        </div>
-        <!-- End Modal Mobile -->
-
-        <!-- Mobile-header -->
-        <div class="mobile-header">
-            <div style="display: flex; flex: 1">
-                <img class="logo" src="./images/logo.svg">
-            </div>
-
-            <div style="display: flex; flex-direction: column; justify-content: right;" >
-                <div> 
-                     <div style="display: flex; flex-direction: row; text-align: center; " id="mobilemenu">
-                         <img src="./images/car.svg" style="width: 25px;" style="width: 25px;" style="width: 25px;">
-                         <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">
-                            Menu 
-                         </div>
-                     </div>
-                    <div style="display: flex; flex-direction: row; text-align: center;" id="Contatti">
-                         <img src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                         <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">
-                            Contatti 
-                         </div>
-                     </div>
-                    <div style="display: flex; flex-direction: row; text-align: center;" id="storia">
-                         <img src="./images/car.svg" style="width: 25px;"  style="width: 25px;">
-                         <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">
-                            Storia 
-                         </div>
-                     </div>
-                     
-                </div>
-            </div>
-        </div>
-        <!-- End-Off-header -->            
-
-        <!-- Desktop Header -->            
-        <div class="desktop-header">
-            <div>
-                <img class="logo" src="./images/logo.svg">
-            </div>
-             <div>
-                <ul>
-                    <a href="index.html" class="items"> <img
-                            src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                        Chi siamo </a>
-                    <a href="contact.html" class="items"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Contatti </li>
-                        <a href="cars.html" class="items "> <li> <img
-                                    src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                                Catalogo </li></a>
-                        <a href="novita.html" class="items "> <li> <img
-                                    src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                                Novità </li></a>
-                        <a href="storia.html" class="items"> <li> <img
-                                    src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                                Storia </li></a>
+            <nav class="mobile" aria-label="Navigazione mobile">
+                <img class="mobile-logo" src="./images/logo.svg" alt="TheGiocher – Logo" onclick="window.location = './index.html'" style="cursor: pointer;">
+                <img class="mobileexit" id="mobilexit" src="./images/index.png" alt="Chiudi menu">
+                <div class="ul-list-mobile">
+                    <ul>
+                        <li><a href="index.html" class="items-mobile"><img src="./images/car.svg" style="width: 25px;" alt="">Chi siamo</a></li>
+                        <li><a href="contact.html" class="items-mobile"><img src="./images/car.svg" style="width: 25px;" alt="">Contatti</a></li>
+                        <li><a href="cars.html" class="items-mobile"><img src="./images/car.svg" style="width: 25px;" alt="">Catalogo</a></li>
+                        <li><a href="novita.html" class="items-mobile"><img src="./images/car.svg" style="width: 25px;" alt="">Novità</a></li>
+                        <li><a href="storia.html" class="items-mobile"><img src="./images/car.svg" style="width: 25px;" alt="">Storia</a></li>
                     </ul>
                 </div>
+            </nav>
+
+            <!-- Mobile Header -->
+            <div class="mobile-header" role="navigation" aria-label="Menu rapido mobile">
+                <div style="display: flex; flex: 1">
+                    <img class="logo" src="./images/logo.svg" alt="TheGiocher – Modellini Auto in Scala">
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: right;">
+                    <div>
+                        <div style="display: flex; flex-direction: row; text-align: center;" id="mobilemenu">
+                            <img src="./images/car.svg" style="width: 25px;" alt="">
+                            <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">Menu</div>
+                        </div>
+                        <div style="display: flex; flex-direction: row; text-align: center;" id="Contatti">
+                            <img src="./images/car.svg" style="width: 25px;" alt="">
+                            <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">Contatti</div>
+                        </div>
+                        <div style="display: flex; flex-direction: row; text-align: center;" id="storia">
+                            <img src="./images/car.svg" style="width: 25px;" alt="">
+                            <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">Storia</div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Desktop Header -->
+            <nav class="desktop-header" aria-label="Navigazione principale">
+                <div>
+                    <a href="index.html" aria-label="Homepage TheGiocher">
+                        <img class="logo" src="./images/logo.svg" alt="TheGiocher – Auto da Collezione e Modellismo">
+                    </a>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="index.html" class="items"><img src="./images/car.svg" style="width: 25px;" alt="">Chi siamo</a></li>
+                        <li><a href="contact.html" class="items"><img src="./images/car.svg" style="width: 25px;" alt="">Contatti</a></li>
+                        <li><a href="cars.html" class="items"><img src="./images/car.svg" style="width: 25px;" alt="">Catalogo</a></li>
+                        <li><a href="novita.html" class="items"><img src="./images/car.svg" style="width: 25px;" alt="">Novità</a></li>
+                        <li><a href="storia.html" class="items"><img src="./images/car.svg" style="width: 25px;" alt="">Storia</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main id="main-content" role="main">
+
+            <!-- Griglia prodotti caricata dinamicamente da cars.js -->
+            <div class="align-center" id="innerqui" aria-label="Griglia prodotti modellini auto">
+                <script src="./js/cars.js"></script>
+            </div>
+
+        </main>
+
+        <!-- WhatsApp Button -->
+        <div id="wathsapp" role="complementary" aria-label="Contattaci su WhatsApp">
+            <a href="https://wa.me/INSERISCINUMERO" aria-label="Contatta TheGiocher su WhatsApp per info sui modellini" title="Chatta con noi su WhatsApp" rel="noopener">
+                <img class="img-w" src="./images/WhatsApp-icon-PNG.png" alt="WhatsApp – Contatta TheGiocher">
+            </a>
         </div>
-        <!-- Enf-Off Desktop-Header -->  
 
-    <div class="align-center" id="innerqui">
-        <script src="./js/cars.js"></script>
-    </div>
-
-    <div id="wathsapp"> <img class="img-w" src="./images/WhatsApp-icon-PNG.png"></div>
-    <script src="js/load.js"></script>
+        <script src="js/load.js"></script>
     </body>
 </html>
