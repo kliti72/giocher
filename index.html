@@ -1,146 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="./images/car.svg" style="width: 25px;" style="width: 25px;" type="image/x-icon" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- ===================== SEO CORE ===================== -->
+        <title>Giocher – Auto da Collezione, Modellini e Passione per i Motori | Giuliano</title>
+        <meta name="description" content="Giocher nasce dalla passione di due fratelli per le auto da collezione e il modellismo in scala 1/43. Scopri il nostro catalogo, la nostra storia e contattaci per trovare il modellino dei tuoi sogni.">
+        <meta name="keywords" content="auto da collezione, modellini in scala, modellismo statico, modellismo dinamico, scala 1/43, Giocher, Giuliano Michele, auto modellini, macchinine da collezione, novità modellismo">
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+        <meta name="author" content="Giuliano e Michele – Giocher">
+        <meta name="language" content="Italian">
+        <link rel="canonical" href="https://www.Giocher.it/index.html">
+
+        <!-- ===================== OPEN GRAPH (Facebook / WhatsApp / Social) ===================== -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.Giocher.it/">
+        <meta property="og:title" content="Giocher – Auto da Collezione & Modellismo in Scala 1/43">
+        <meta property="og:description" content="La passione di due fratelli per le auto trasformata in vocazione. Scopri il catalogo Giocher: modellini statici, dinamici e novità da collezione.">
+        <meta property="og:image" content="https://www.Giocher.it/images/og-cover.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:site_name" content="Giocher">
+        <meta property="og:locale" content="it_IT">
+
+        <!-- ===================== TWITTER CARD ===================== -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Giocher – Auto da Collezione & Modellismo in Scala 1/43">
+        <meta name="twitter:description" content="La passione di due fratelli per le auto trasformata in vocazione. Scopri il catalogo Giocher.">
+        <meta name="twitter:image" content="https://www.Giocher.it/images/og-cover.jpg">
+
+        <!-- ===================== SCHEMA.ORG STRUCTURED DATA (JSON-LD) ===================== -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Giocher",
+          "description": "Vetrina modellini, specializzato in auto da collezione e modellismo in scala 1/43, fondato da due fratelli appassionati di motori.",
+          "url": "https://www.Giocher.it",
+          "logo": "https://www.Giocher.it/images/logo.svg",
+          "image": "https://www.Giocher.it/images/og-cover.jpg",
+          "founder": [
+            { "@type": "Person", "name": "Giuliano" },
+            { "@type": "Person", "name": "Michele" }
+          ],
+          "sameAs": [],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "Italian"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Catalogo Modellini Auto",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Modellini auto in scala 1/43",
+                  "category": "Modellismo"
+                }
+              }
+            ]
+          }
+        }
+        </script>
+
+        <!-- ===================== BREADCRUMB SCHEMA ===================== -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.Giocher.it/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Chi Siamo",
+              "item": "https://www.Giocher.it/index.html"
+            }
+          ]
+        }
+        </script>
+
+        <!-- ===================== PERFORMANCE & PRELOAD ===================== -->
+        <link rel="preconnect" href="https://ajax.googleapis.com">
+        <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+        <link rel="preload" href="./css/style.css" as="style">
+        <link rel="preload" href="./images/logo.svg" as="image">
+
+        <!-- ===================== FAVICON ===================== -->
+        <link rel="icon" href="./images/car.svg" type="image/svg+xml">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <!-- ===================== SCRIPTS & STYLES ===================== -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="./css/load.css">
         <link rel="stylesheet" type="text/css" href="./css/mobile.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <link rel="stylesheet" type="text/css" href="./css/header.css">
-        <title>TheGiocher</title> 
     </head>
-    <body>        
-        <!-- Modal Mobile -->
-        <div class="mobile">
-            <img class="mobile-logo" src="./images/logo.svg" onclick="window.location = './index.html'" style="cursor: pointer;">
-            <img class="mobileexit" id="mobilexit" src="./images/index.png">
-            <div class="ul-list-mobile">
-                <ul>
-                    <a href="index.html" class="items-mobile"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Chi siamo </li></a>
-                    <a href="contact.html" class="items-mobile"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Contatti </li></a>
-                    <a href="cars.html" class="items-mobile"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Catalogo </li></a>
-                    <a href="novita.html" class="items-mobile"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Novità </li></a>
-                    <a href="storia.html" class="items-mobile"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Storia </li></a>
-                </ul>
-            </div>
-        </div>
-        <!-- End Modal Mobile -->
 
-        <!-- Mobile-header -->
-        <div class="mobile-header">
-            <div style="display: flex; flex: 1">
-                <img class="logo" src="./images/logo.svg">
-            </div>
+    <body>
+        <!-- HEADER role="banner" per accessibilità e SEO semantico -->
+        <header role="banner" aria-label="Intestazione principale Giocher">
 
-            <div style="display: flex; flex-direction: column; justify-content: right;" >
-                <div> 
-                     <div style="display: flex; flex-direction: row; text-align: center; " id="mobilemenu">
-                         <img src="./images/car.svg" style="width: 25px;" style="width: 25px;" style="width: 25px;">
-                         <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">
-                            Menu <br>
-                         </div>
-                     </div>
-                    <div style="display: flex; flex-direction: row; text-align: center;" id="Contatti">
-                         <img src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                         <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">
-                            Contatti 
-                         </div>
-                     </div>
-                    <div style="display: flex; flex-direction: row; text-align: center;" id="storia">
-                         <img src="./images/car.svg" style="width: 25px;"  style="width: 25px;">
-                         <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">
-                            Storia 
-                         </div>
-                     </div>
-                     
-                </div>
-            </div>
-        </div>
-        <!-- End-Off-header -->            
-
-        <!-- Desktop Header -->            
-        <div class="desktop-header">
-            
-            <div>
-                <img class="logo" src="./images/logo.svg">
-            </div>
-
-             <div>
-                <ul>
-                    <a href="index.html" class="items"> <img
-                            src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                        Chi siamo </a>
-                    <a href="contact.html" class="items"> <li> <img
-                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                            Contatti </li>
-                        <a href="cars.html" class="items "> <li> <img
-                                    src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                                Catalogo </li></a>
-                        <a href="novita.html" class="items "> <li> <img
-                                    src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                                Novità </li></a>
-                        <a href="storia.html" class="items"> <li> <img
-                                    src="./images/car.svg" style="width: 25px;" style="width: 25px;">
-                                Storia </li></a>
-
+            <!-- Modal Mobile -->
+            <nav class="mobile" aria-label="Navigazione mobile">
+                <img class="mobile-logo" src="./images/logo.svg" alt="Giocher – Logo" onclick="window.location = './index.html'" style="cursor: pointer;">
+                <img class="mobileexit" id="mobilexit" src="./images/index.png" alt="Chiudi menu">
+                <div class="ul-list-mobile">
+                    <ul>
+                        <li><a href="index.html" class="items-mobile"><img src="./images/car.svg" style="width: 25px;" alt="">Chi siamo</a></li>
+                        <li><a href="contact.html" class="items-mobile"><img src="./images/car.svg" style="width: 25px;" alt="">Contatti</a></li>
+                        <li><a href="cars.html" class="items-mobile"><img src="./images/car.svg" style="width: 25px;" alt="">Catalogo</a></li>
+                        <li><a href="novita.html" class="items-mobile"><img src="./images/car.svg" style="width: 25px;" alt="">Novità</a></li>
+                        <li><a href="storia.html" class="items-mobile"><img src="./images/car.svg" style="width: 25px;" alt="">Storia</a></li>
                     </ul>
                 </div>
+            </nav>
+
+            <!-- Mobile Header -->
+            <div class="mobile-header" role="navigation" aria-label="Menu rapido mobile">
+                <div style="display: flex; flex: 1">
+                    <img class="logo" src="./images/logo.svg" alt="Giocher – Auto da Collezione">
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: right;">
+                    <div>
+                        <div style="display: flex; flex-direction: row; text-align: center;" id="mobilemenu" aria-label="Apri menu">
+                            <img src="./images/car.svg" style="width: 25px;" alt="">
+                            <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">Menu</div>
+                        </div>
+                        <div style="display: flex; flex-direction: row; text-align: center;" id="Contatti">
+                            <img src="./images/car.svg" style="width: 25px;" alt="">
+                            <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">Contatti</div>
+                        </div>
+                        <div style="display: flex; flex-direction: row; text-align: center;" id="storia">
+                            <img src="./images/car.svg" style="width: 25px;" alt="">
+                            <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">Storia</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- Enf-Off Desktop-Header -->  
-         
-        <!-- Body -->
+
+            <!-- Desktop Header -->
+            <nav class="desktop-header" aria-label="Navigazione principale">
+                <div>
+                    <a href="index.html" aria-label="Torna alla homepage Giocher">
+                        <img class="logo" src="./images/logo.svg" alt="Giocher – Auto da Collezione e Modellismo">
+                    </a>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="index.html" class="items"><img src="./images/car.svg" style="width: 25px;" alt="">Chi siamo</a></li>
+                        <li><a href="contact.html" class="items"><img src="./images/car.svg" style="width: 25px;" alt="">Contatti</a></li>
+                        <li><a href="cars.html" class="items"><img src="./images/car.svg" style="width: 25px;" alt="">Catalogo</a></li>
+                        <li><a href="novita.html" class="items"><img src="./images/car.svg" style="width: 25px;" alt="">Novità</a></li>
+                        <li><a href="storia.html" class="items"><img src="./images/car.svg" style="width: 25px;" alt="">Storia</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+        <!-- Fine header -->
+
+        <!-- MAIN CONTENT – semantica forte per Google -->
+        <main id="main-content" role="main">
             <div class="align-center">
                 <div class="container">
-                    <div class="image-container">
-                    </div>
-                    <div class="text-container-title2">
-                        <a class="title-image-container">
-                            Chi siamo
-                        </a>
-                        <a class="descrizione-image-container">
+                    <div class="image-container" role="img" aria-label="Immagine decorativa auto da collezione"></div>
 
-                            L'idea di far rivivere la "Giocher" nasce dalla
-                            passione di due fratelli (Giuliano e Michele)
-                            per i motori, le auto e il modellismo statico e
-                            dinamico.
-                            Nella loro piccola cameretta la loro passione era
-                            già diventata "vocazione pura".
-                            Le auto infatti, facevano già parte del loro mondo,
-                            con una piccola collezione di modellini in scala
-                            1/43.
-                            Gli anni passano e quella piccola collezione prende
-                            sempre più corpo, la passione si fà sempre più
-                            grande,fino
-                            a tramutarsi in un sogno ad occhi aperti e i sogni
-                            quando hanno le ruote ti possono portare lontano....
+                    <article class="text-container-title2" aria-label="Chi siamo – Giocher">
 
-                        </a>
+                        <h1 class="title-image-container">Chi siamo</h1>
 
-                        <a class="contattaci">
+                        <p class="descrizione-image-container">
+                            L'idea di far rivivere la <strong>Giocher</strong> nasce dalla passione di due fratelli —
+                            <strong>Giuliano e Michele</strong> — per i motori, le auto e il <strong>modellismo statico e dinamico</strong>.
+                            Nella loro piccola cameretta la loro passione era già diventata "vocazione pura".
+                            Le auto infatti, facevano già parte del loro mondo, con una piccola collezione di
+                            <strong>modellini in scala 1/43</strong>.
+                            Gli anni passano e quella piccola collezione prende sempre più corpo, la passione si fa sempre più
+                            grande, fino a tramutarsi in un sogno ad occhi aperti — e i sogni, quando hanno le ruote, ti possono portare lontano...
+                        </p>
+
+                        <a class="contattaci" href="contact.html" aria-label="Contattaci – Giocher auto da collezione" title="Contatta Giocher per informazioni su modellini e auto da collezione">
                             Contattaci
                         </a>
 
-                    </div>
+                    </article>
                 </div>
             </div>
+        </main>
+        <!-- Fine main -->
 
-       <div id="wathsapp"> <img class="img-w" src="./images/WhatsApp-icon-PNG.png"></div>
+        <!-- WhatsApp Button -->
+        <div id="wathsapp" role="complementary" aria-label="Contattaci su WhatsApp">
+            <a aria-label="Contatta Giocher su WhatsApp" title="Chatta con noi su WhatsApp" rel="noopener">
+                <img class="img-w" src="./images/WhatsApp-icon-PNG.png" alt="WhatsApp – Contatta Giocher">
+            </a>
+        </div>
+
         <script src="js/load.js"></script>
     </body>
 </html>
