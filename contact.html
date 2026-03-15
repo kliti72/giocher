@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mobile.css">
             <link rel="stylesheet" type="text/css" href="./css/header.css">
+
     <title>TheGiocher</title>
     <style>
         #test { height:80px; width:80px; position:fixed; background-color:rgb(84,175,42); border-radius:5px; right:1em; bottom:1em; cursor:pointer; }
@@ -45,8 +46,7 @@
     </style>
 </head>
 <body>
-
-<!-- Modal Mobile -->
+     <!-- Modal Mobile -->
         <div class="mobile">
             <img class="mobile-logo" src="./images/logo.svg" onclick="window.location = './index.html'" style="cursor: pointer;">
             <img class="mobileexit" id="mobilexit" src="./images/index.png">
@@ -103,23 +103,70 @@
                 </div>
             </div>
         </div>
-        <!-- End-Off-header -->   
+        <!-- End-Off-header -->            
+
+        <!-- Desktop Header -->            
+        <div class="desktop-header">
+            
+            <div>
+                <img class="logo" src="./images/logo.svg">
+            </div>
+
+             <div>
+                <ul>
+                    <a href="index.html" class="items"> <img
+                            src="./images/car.svg" style="width: 25px;" style="width: 25px;">
+                        Chi siamo </a>
+                    <a href="contact.html" class="items"> <li> <img
+                                src="./images/car.svg" style="width: 25px;" style="width: 25px;">
+                            Contatti </li>
+                        <a href="cars.html" class="items "> <li> <img
+                                    src="./images/car.svg" style="width: 25px;" style="width: 25px;">
+                                Catalogo </li></a>
+                        <a href="novita.html" class="items "> <li> <img
+                                    src="./images/car.svg" style="width: 25px;" style="width: 25px;">
+                                Novità </li></a>
+                        <a href="storia.html" class="items"> <li> <img
+                                    src="./images/car.svg" style="width: 25px;" style="width: 25px;">
+                                Storia </li></a>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Enf-Off Desktop-Header -->  
 
     <div class="containercontact">
-        <a class="contact-card" href="mailto:Info@giocher.it">
+       
+        <a class="contact-card" href="https://www.facebook.com/share/1DqgVUKDtb/?mibextid=wwXIfr" target="_blank">
             <div>
+               <i class="fab fa-facebook"></i> 
+                <span class="contact-label">Giocher </span>
+            </div>  
+        </a>
+                <a class="contact-card" href="https://www.facebook.com/share/1Ak3hABwfa/?mibextid=wwXIfr" target="_blank">
+            <div>
+                <i class="fab fa-facebook"></i> 
+                <span class="contact-label">Il mondo del Modellismo</span>
+            </div>
+        </a>
+                <a class="contact-card" href="mailto:Info@giocher.it">
+            <div>
+                <i class="fa-solid fa-at"></i>
                 <span class="contact-label">Scrivici</span>
                 Info@giocher.it
             </div>
         </a>
         <a class="contact-card" href="tel:+393335765279">
             <div>
+                <i class="fa-solid fa-phone"></i>
                 <span class="contact-label">Chiamaci</span>
                 +39 333 576 5279
             </div>
         </a>
         <a class="contact-card" href="https://wa.me/393335765279" target="_blank">
             <div>
+                <i class="fa-brands fa-whatsapp"></i>
                 <span class="contact-label">WhatsApp</span>
                 +39 333 576 5279
             </div>
@@ -128,5 +175,7 @@
 
     <div id="wathsapp"> <img class="img-w" src="./images/WhatsApp-icon-PNG.png"></div>
     <script src="js/load.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
 </body>
 </html>
