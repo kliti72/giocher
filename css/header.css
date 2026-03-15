@@ -1,0 +1,21 @@
+.mobile-header {
+    display: flex; flex-direction: row; justify-content: flex-start; flex: 1;
+    display: none;
+    background-color: rgb(255, 183, 27);
+}
+
+.desktop-header {
+    background-color: rgb(255, 183, 27);
+    text-align: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 680px) {
+    .mobile-header {
+        display: flex;
+    }
+    .desktop-header {
+        display: none;
+    }
+}

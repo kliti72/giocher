@@ -34,35 +34,6 @@ ul li {
     display: none;
 }
 
-@media only screen and (max-width: 956px) {
-    .items {
-        display: none;
-    }
-
-    .header {
-        text-align: left;
-    }
-
-    .menu {
-        display: block;
-    }
-
-    .mobile {
-        background-color: #ffffff;
-        height: 100%;
-        width: 70%;
-        z-index: 99;
-        position: absolute;
-        opacity: 0%;
-        overflow: hidden;
-        transition: all 1s;
-
-
-    }
-
-
-}
-
 
 .container {
     width: 100%;
@@ -141,12 +112,6 @@ ul li {
 
 }
 
-
-
-
-
-
-
 @media only screen and (max-width: 956px) {
     .image-container {
         display: block;
@@ -174,7 +139,6 @@ ul li {
 }
 
 .title-storia {
-
     width: 100%;
     font-size: 5em;
     display: inline-block;
@@ -196,7 +160,7 @@ ul li {
 }
 
 
-#test {
+#wathsapp {
     height: 80px;
     width: 80px;
     position: absolute;

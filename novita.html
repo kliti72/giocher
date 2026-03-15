@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/load.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
     <title>TheGiocher</title>
     <style>
         #test { height:80px; width:80px; position:fixed; background-color:rgb(84,175,42); border-radius:5px; right:1em; bottom:1em; }
@@ -76,37 +77,48 @@
     </style>
 </head>
 <body>
-
-    <div class="bg-load">
-        <div class="align">
-            <img class="carimage" src="./images/car.svg">
-            <a class="descript-load">Caricamento..</a>
-        </div>
-    </div>
-
     <div class="mobile">
         <img class="mobile-logo" src="./images/logo.svg" href="index.html" onclick="window.location = './index.html'" style="cursor: pointer;">
         <img class="mobileexit" id="mobilexit" src="./images/index.png">
         <div class="ul-list-mobile"><ul>
-            <a href="index.html"   class="items-mobile"><li><img src="./images/car.svg"> Chi siamo</li></a>
-            <a href="contact.html" class="items-mobile"><li><img src="./images/car.svg"> Contatti</li></a>
-            <a href="cars.html"    class="items-mobile"><li><img src="./images/car.svg"> Catalogo</li></a>
-            <a href="novita.html"  class="items-mobile"><li><img src="./images/car.svg"> Novità</li></a>
-            <a href="cars.html"    class="items-mobile"><li><img src="./images/car.svg"> Storia</li></a>
+            <a href="index.html"   class="items-mobile"><li><img src="./images/car.svg" style="width: 50px;"> Chi siamo</li></a>
+            <a href="contact.html" class="items-mobile"><li><img src="./images/car.svg" style="width: 50px;"> Contatti</li></a>
+            <a href="cars.html"    class="items-mobile"><li><img src="./images/car.svg" style="width: 50px;"> Catalogo</li></a>
+            <a href="novita.html"  class="items-mobile"><li><img src="./images/car.svg" style="width: 50px;"> Novità</li></a>
+            <a href="cars.html"    class="items-mobile"><li><img src="./images/car.svg" style="width: 50px;"> Storia</li></a>
         </ul></div>
     </div>
 
-    <div class="header">
-        <img class="logo" src="./images/logo.svg" onclick="window.location = './index.html'" style="cursor: pointer;">
-        <img class="menu" id="mobilemenu" src="./images/menu.svg">
-        <div class="ul-list"><ul>
-            <a href="index.html"   class="items"><img src="./images/car.svg"> Chi siamo</a>
-            <a href="contact.html" class="items"><li><img src="./images/car.svg"> Contatti</li></a>
-            <a href="cars.html"    class="items"><li><img src="./images/car.svg"> Catalogo</li></a>
-            <a href="novita.html"  class="items"><li><img src="./images/car.svg"> Novità</li></a>
-            <a href="storia.html"  class="items"><li><img src="./images/car.svg"> Storia</li></a>
-        </ul></div>
-    </div>
+ <div class="header" style="display: flex; flex-direction: row; justify-content: flex-start; flex: 1">
+            <div style="display: flex; flex: 1">
+                <img class="logo" src="./images/logo.svg">
+            </div>
+
+            <div style="display: flex; flex-direction: column; justify-content: right;">
+                <div> 
+                     <div style="display: flex; flex-direction: row; text-align: center; " id="mobilemenu">
+                         <img src="./images/car.svg" style="width: 25px;" style="width: 25px;" style="width: 25px;">
+                         <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">
+                            Menu <br>
+                            <span style="font-size: 0.8em; color: rgb(219, 219, 219);"> Porta al menu </span>
+                         </div>
+                     </div>
+                    <div style="display: flex; flex-direction: row; text-align: center;" id="Contatti">
+                         <img src="./images/car.svg" style="width: 25px;" style="width: 25px;">
+                         <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">
+                            Contatti 
+                         </div>
+                     </div>
+                    <div style="display: flex; flex-direction: row; text-align: center;" id="storia">
+                         <img src="./images/car.svg" style="width: 25px;"  style="width: 25px;">
+                         <div style="background-color: #2b692d; padding: 1em; margin: 0.2em; color: white; font-weight: bold; width: 100px;">
+                            Storia 
+                         </div>
+                     </div>
+                     
+                </div>
+            </div>
+</div>
 
 
     <a class="title-news">Nuovi Modellini Fiat Ducato 1/43 </a>
@@ -245,6 +257,7 @@
 
     <div id="test"><img class="img-w" src="./images/WhatsApp-icon-PNG.png"></div>
 
-    <script src="./js/load.js"></script>
+    <div id="wathsapp"> <img class="img-w" src="./images/WhatsApp-icon-PNG.png"></div>
+    <script src="js/load.js"></script>
 </body>
 </html>
